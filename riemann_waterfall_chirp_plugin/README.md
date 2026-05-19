@@ -114,3 +114,28 @@ pytest -q
 - **SDR++ / SDR#**: expose waterfall tiles to a sidecar process, then blend returned RGBA overlays in the UI layer.
 - **PyQt/PySide waterfall viewers**: pass the displayed NumPy waterfall buffer directly and composite the returned overlay.
 - **Web dashboards**: POST a frame to a local service wrapper around `RiemannResonanceWaterfallPlugin` and draw returned detections in canvas/SVG/WebGL.
+
+## SDR++ native module
+
+This package now includes a first native SDR++ module target:
+
+```text
+sdrpp_modules/riemann_chirp_overlay/
+```
+
+The SDR++ module is C++17 and mirrors the Python detector's core idea directly in native code so SDR++ does not need to embed Python. It samples recent FFT rows from the SDR++ waterfall, builds a rolling waterfall history, detects chirp-like ridges, and draws overlay boxes/ridge lines in the waterfall region.
+
+To validate the native detector core without SDR++ headers:
+
+```bash
+cd sdrpp_modules/riemann_chirp_overlay
+./tools/build_smoke_detector.sh
+```
+
+To integrate it into SDR++, copy `sdrpp_modules/riemann_chirp_overlay` into `SDRPlusPlus/misc_modules/riemann_chirp_overlay`, then apply the snippet in `patches/sdrpp_root_cmake_snippet.txt` to SDR++'s root CMake file and build with:
+
+```bash
+cmake .. -DOPT_BUILD_RIEMANN_CHIRP_OVERLAY=ON
+```
+
+See `sdrpp_modules/riemann_chirp_overlay/README.md` for full Linux and Windows instructions.

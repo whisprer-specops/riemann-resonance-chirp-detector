@@ -5,7 +5,10 @@
   "kind": "waterfall-overlay-detector",
   "input": {
     "type": "float32-array",
-    "shape": ["time_bins", "frequency_bins"],
+    "shape": [
+      "time_bins",
+      "frequency_bins"
+    ],
     "semantics": "waterfall or spectrogram intensity"
   },
   "output": {
@@ -25,5 +28,18 @@
     "decrypts_content": false,
     "transmits_data": false,
     "passive_visual_overlay_only": true
+  },
+  "host_integrations": [
+    "sdrpp_native_module"
+  ],
+  "sdrpp_native_module": {
+    "path": "sdrpp_modules/riemann_chirp_overlay",
+    "module_name": "riemann_chirp_overlay",
+    "language": "C++17",
+    "status": "native SDR++ source-tree module scaffold with standalone detector smoke test",
+    "limits": [
+      "Uses public FFT/waterfall access and draw-list overlay; does not patch SDR++ internal waterfall framebuffer.",
+      "Requires building inside an SDR++ source checkout to verify final ABI compatibility."
+    ]
   }
 }

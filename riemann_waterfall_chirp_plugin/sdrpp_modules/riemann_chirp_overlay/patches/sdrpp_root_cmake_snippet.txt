@@ -1,0 +1,7 @@
+# Add this near the other misc module build options in SDRPlusPlus/CMakeLists.txt
+option(OPT_BUILD_RIEMANN_CHIRP_OVERLAY "Build Riemann chirp overlay module" OFF)
+
+# Add this near the other misc_modules add_subdirectory(...) blocks.
+if (OPT_BUILD_RIEMANN_CHIRP_OVERLAY)
+    add_subdirectory("misc_modules/riemann_chirp_overlay")
+endif()
