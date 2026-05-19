@@ -1,0 +1,107 @@
+[
+  {
+    "label": "entropy_chirp",
+    "score": 0.471419786053765,
+    "bbox": [
+      120,
+      329,
+      216,
+      421
+    ],
+    "slope_bins_per_row": -0.8638297872340426,
+    "intercept_freq_bin": 416.0,
+    "ridge_snr": 0.49103440350016664,
+    "renyi_sharpness": 0.03355968396940534,
+    "permutation_structure": 0.05087229489610934,
+    "zeta_resonance": 0.23528166093230776,
+    "entropy_centrality": 0.0,
+    "time_start": 120,
+    "time_end": 216,
+    "freq_start": 329,
+    "freq_end": 421
+  },
+  {
+    "label": "entropy_chirp",
+    "score": 0.4632205957381169,
+    "bbox": [
+      24,
+      77,
+      120,
+      156
+    ],
+    "slope_bins_per_row": 0.7351063829787234,
+    "intercept_freq_bin": 81.0,
+    "ridge_snr": 0.4780639021433535,
+    "renyi_sharpness": 0.03719646610026328,
+    "permutation_structure": 0.02928228592755333,
+    "zeta_resonance": 0.2421728765394603,
+    "entropy_centrality": 0.0,
+    "time_start": 24,
+    "time_end": 120,
+    "freq_start": 77,
+    "freq_end": 156
+  },
+  {
+    "label": "riemann_resonant_chirp",
+    "score": 0.44920026979245,
+    "bbox": [
+      72,
+      113,
+      168,
+      183
+    ],
+    "slope_bins_per_row": 0.6321276595744681,
+    "intercept_freq_bin": 117.0,
+    "ridge_snr": 0.4179932471329123,
+    "renyi_sharpness": 0.036434387450690275,
+    "permutation_structure": 0.028820310602055144,
+    "zeta_resonance": 0.3300157188105081,
+    "entropy_centrality": 0.0,
+    "time_start": 72,
+    "time_end": 168,
+    "freq_start": 113,
+    "freq_end": 183
+  },
+  {
+    "label": "riemann_resonant_chirp",
+    "score": 0.4418407927070953,
+    "bbox": [
+      72,
+      446,
+      168,
+      512
+    ],
+    "slope_bins_per_row": 0.8895744680851064,
+    "intercept_freq_bin": 450.0,
+    "ridge_snr": 0.3924526715588247,
+    "renyi_sharpness": 0.040317546417842465,
+    "permutation_structure": 0.06914939187554381,
+    "zeta_resonance": 0.3253829572661719,
+    "entropy_centrality": 0.0,
+    "time_start": 72,
+    "time_end": 168,
+    "freq_start": 446,
+    "freq_end": 512
+  },
+  {
+    "label": "entropy_chirp",
+    "score": 0.44038539864096804,
+    "bbox": [
+      160,
+      291,
+      256,
+      387
+    ],
+    "slope_bins_per_row": -0.9153191489361703,
+    "intercept_freq_bin": 382.0,
+    "ridge_snr": 0.447258892790161,
+    "renyi_sharpness": 0.03364428380798412,
+    "permutation_structure": 0.029811276755528415,
+    "zeta_resonance": 0.2224450966100598,
+    "entropy_centrality": 0.0,
+    "time_start": 160,
+    "time_end": 256,
+    "freq_start": 291,
+    "freq_end": 387
+  }
+]

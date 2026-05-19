@@ -1,0 +1,29 @@
+{
+  "name": "Riemann Chirp Overlay",
+  "id": "ryomodular.riemann_chirp_overlay",
+  "version": "0.1.0",
+  "kind": "waterfall-overlay-detector",
+  "input": {
+    "type": "float32-array",
+    "shape": ["time_bins", "frequency_bins"],
+    "semantics": "waterfall or spectrogram intensity"
+  },
+  "output": {
+    "detections": "list of chirp detection objects",
+    "overlay_rgba": "uint8 array shaped [time_bins, frequency_bins, 4]",
+    "heatmap": "float64 array shaped [time_bins, frequency_bins]"
+  },
+  "capabilities": [
+    "chirp-highlight",
+    "lfm-detection",
+    "entropy-features",
+    "zeta-zero-resonance-feature-bank",
+    "software-agnostic-overlay"
+  ],
+  "safety": {
+    "demodulates_content": false,
+    "decrypts_content": false,
+    "transmits_data": false,
+    "passive_visual_overlay_only": true
+  }
+}

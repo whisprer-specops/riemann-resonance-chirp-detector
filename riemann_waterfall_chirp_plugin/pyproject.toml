@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "riemann-chirp-overlay"
+version = "0.1.0"
+description = "Software-agnostic SDR waterfall chirp highlighter using entropy and zeta-zero resonance features."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "RYOModular / Wolfy Tom" }]
+dependencies = ["numpy>=1.23"]
+
+[project.optional-dependencies]
+demo = ["matplotlib>=3.7"]
+test = ["pytest>=7.0", "matplotlib>=3.7"]
+
+[project.scripts]
+rrchirp = "riemann_chirp_overlay.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["riemann_chirp_overlay*"]
